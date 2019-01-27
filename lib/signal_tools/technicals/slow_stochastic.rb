@@ -1,4 +1,4 @@
-require './lib/signal_tools/technicals/stochastic'
+require_relative 'stochastic.rb'
 
 module SignalTools::Technicals
   class SlowStochastic

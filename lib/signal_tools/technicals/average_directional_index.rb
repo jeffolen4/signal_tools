@@ -1,4 +1,4 @@
-require './lib/signal_tools/technicals/true_range'
+require_relative 'true_range.rb'
 
 module SignalTools::Technicals
   class AverageDirectionalIndex

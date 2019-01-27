@@ -1,4 +1,3 @@
-require './lib/signal_tools/technicals/common'
 
 module SignalTools
   module Technicals

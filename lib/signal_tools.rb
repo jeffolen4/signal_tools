@@ -1,12 +1,12 @@
-require "signal_tools/stock_data"
-require "signal_tools/stock"
-require "signal_tools/technicals/average_directional_index"
-require "signal_tools/technicals/average_true_range"
-require "signal_tools/technicals/common"
-require "signal_tools/technicals/ema"
-require "signal_tools/technicals/fast_stochastic"
-require "signal_tools/technicals/slow_stochastic"
-require "signal_tools/technicals/macd"
+require_relative "signal_tools/stock_data.rb"
+require_relative "signal_tools/stock.rb"
+require_relative "signal_tools/technicals/average_directional_index.rb"
+require_relative "signal_tools/technicals/average_true_range.rb"
+require_relative "signal_tools/technicals/common.rb"
+require_relative "signal_tools/technicals/ema.rb"
+require_relative "signal_tools/technicals/fast_stochastic.rb"
+require_relative "signal_tools/technicals/slow_stochastic.rb"
+require_relative "signal_tools/technicals/macd.rb"
 
 module SignalTools
   def self.sum(array)

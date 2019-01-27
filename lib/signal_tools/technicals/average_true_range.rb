@@ -1,5 +1,5 @@
-require './lib/signal_tools/technicals/common'
-require './lib/signal_tools/technicals/true_range'
+require_relative 'common.rb'
+require_relative 'true_range.rb'
 
 module SignalTools::Technicals
   class AverageTrueRange

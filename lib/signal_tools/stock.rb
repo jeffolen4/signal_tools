@@ -1,4 +1,4 @@
-require './lib/signal_tools/technicals/common'
+require_relative 'technicals/common.rb'
 
 module SignalTools
   class Stock
@@ -9,11 +9,11 @@ module SignalTools
     attr_accessor :ticker
     attr_reader :dates, :stock_data
 
-    def initialize(ticker, from_date=Date.today-DEFAULT_PERIOD, to_date=Date.today)
+    def initialize(raw, from_date=Date.today-DEFAULT_PERIOD, to_date=Date.today)
       from_date = Date.parse(from_date) unless from_date.is_a?(Date)
       to_date = Date.parse(to_date) unless to_date.is_a?(Date)
       @ticker = ticker
-      @stock_data = SignalTools::StockData.new(ticker, from_date, to_date)
+      @stock_data = SignalTools::StockData.new(raw)
       @dates = stock_data.dates
     end
 

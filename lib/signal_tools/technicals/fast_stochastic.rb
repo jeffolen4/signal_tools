@@ -1,5 +1,5 @@
-require './lib/signal_tools/technicals/common'
-require './lib/signal_tools/technicals/stochastic'
+require_relative 'common.rb'
+require_relative 'stochastic.rb'
 
 module SignalTools::Technicals
   class FastStochastic
