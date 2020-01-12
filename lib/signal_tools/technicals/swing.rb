@@ -24,13 +24,13 @@ module SignalTools::Technicals
 
     def find_swing_highs(swing_days=DEFAULT_SWING_DAYS)
       @data.dates.slice(3..-2).each_with_index do |dt, idx|
-        @swing_highs[idx+3] = @data.close_prices[idx+2] > @data.close_prices[idx+1] && @data.close_prices[idx+2] > @data.close_prices[idx] && @data.close_prices[idx+3] < @data.close_prices[idx+2]
+        @swing_highs[idx+3] = @data.high_prices[idx+2] > @data.high_prices[idx+1] && @data.high_prices[idx+2] > @data.high_prices[idx] && @data.high_prices[idx+3] < @data.high_prices[idx+2]
       end
     end
 
     def find_swing_lows(swing_days=DEFAULT_SWING_DAYS)
       @data.dates.slice(2..-2).each_with_index do |dt, idx|
-        @swing_lows[idx+3] = @data.close_prices[idx+2] < @data.close_prices[idx+1] && @data.close_prices[idx+2] < @data.close_prices[idx] && @data.close_prices[idx+3] > @data.close_prices[idx+2]
+        @swing_lows[idx+3] = @data.low_prices[idx+2] < @data.low_prices[idx+1] && @data.low_prices[idx+2] < @data.low_prices[idx] && @data.low_prices[idx+3] > @data.low_prices[idx+2]
       end
     end
 
