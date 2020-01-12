@@ -19,6 +19,7 @@ module SignalTools
 
     def swing(swing_days)
       swing_lows, swing_highs = SignalTools::Technicals::Swing.new(stock_data).find_swings
+      return swing_lows, swing_highs
     end
 
     def ema(period=10, type=:default)
