@@ -6,10 +6,10 @@ module SignalTools::Technicals
 
     DEFAULT_SWING_DAYS = 3
 
-    attr_reader :stock_data
+    attr_reader :data
 
-    def initialize(stock_data)
-      @data = stock_data
+    def initialize(data)
+      @data = data
       @swing_lows = []
       @swing_highs = []
       #@period = period
