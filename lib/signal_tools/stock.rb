@@ -17,6 +17,10 @@ module SignalTools
       @dates = stock_data.dates
     end
 
+    def swing(swing_days)
+      swing_lows, swing_highs = SignalTools::Technicals::Swing.new(stock_data).find_swings
+    end
+
     def ema(period=10, type=:default)
       ema_data = SignalTools::Technicals::EMA.new(stock_data.close_prices, period, type).calculate
       trim_data_to_range(ema_data, dates.size)

@@ -22,11 +22,11 @@ module SignalTools::Technicals
 
     #TODO: Break Wilder into its own class
     def ema_points
-      emas = [default_simple_average(data, EMA_DEFAULT)]
+      emas = [default_simple_average(data, period)]
       if type == :wilder
-        data.slice(EMA_DEFAULT..-1).each { |current| emas << calculate_wilder_ema(emas.last, current) }
+        data.slice(period..-1).each { |current| emas << calculate_wilder_ema(emas.last, current) }
       else
-        data.slice(EMA_DEFAULT..-1).each { |current| emas << calculate_ema(emas.last, current) }
+        data.slice(period..-1).each { |current| emas << calculate_ema(emas.last, current) }
       end
       emas
     end
